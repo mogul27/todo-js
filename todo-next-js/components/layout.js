@@ -3,7 +3,6 @@ import Head from 'next/head';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const date = "Date here"
 export const siteTitle = "Todo list"
 
 export default function Layout({ children, home }) {

@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/Link'
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
+import { useState, useEffect } from "react";
 
 
 export default function Home() {
