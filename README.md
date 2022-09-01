@@ -15,7 +15,13 @@ External pages outside of the application still require <a> instead of <Link>
 
 Public folder is used for static assets like images  
 
-NextJS pre-geenrates HTML for pages and then JAvaScript runs to make the page interactive, this is called hydration  
+NextJS pre-geenrates HTML for pages and then JAvaScript runs to make the page interactive, this is called hydration 
+
+Components are powerful because they let us re-use pieces of our UI, and refer to one place for the source of that UI. The problem is, we don't typically want to reuse all of each component; we want to reuse most parts, and change small pieces. This is where props come in.
+
+Example prop is name="Task1"
+
+Couldn't write JS before because we were writing in the return part itself
 
 ### Javascript code / Syntax learning
 
@@ -26,6 +32,12 @@ default export means it can be imported without curly braces (Export a single th
 Static generation for pages that don't update frequently, server-side if they do update regularly  
 
 The <label> HTML element represents a caption for an item in a user interface. - use for things like checkboxes
+
+In the middle of a JSX expression use curly brcaes to inject the value of a variable
+
+.map creates a new array populated with the results of calling a provided function on every element in the calling array
+
+=> Is for anonymous functions like Python lambda so you can have const sum => {return a +b }
 
 
 ### To add
