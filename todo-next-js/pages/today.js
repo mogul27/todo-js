@@ -4,11 +4,15 @@ import Layout from '../components/layout';
 import Todo from '../components/Todo';
 import Form from "../components/Form";
 import FilterButton from "../components/FilterButton";
+import React, { useState } from "react";
 
+function addTask(name) {
+    alert(name);
+}
 
 export default function TodayList() {
     
-    const tasks = require('../today_tasks.json')
+    const [tasks, setTasks] = useState(require('../today_tasks.json'))
     const taskList = tasks.map((task) => <Todo key={task.id}  id={task.id}
     name={task.name} completed={task.completed} />);
 
@@ -23,7 +27,7 @@ export default function TodayList() {
          <Link href="/">Back to home</Link>
      </h2>
 
-     <Form />
+     <Form addTask={addTask}/>
 
     {/* These are the buttons for filtering tasks */}
     <div className="filters btn-group stack-exception">
@@ -40,12 +44,7 @@ export default function TodayList() {
 
     <ul role='list' className="todo-list stack-large stack-exception"
     aria-labelledby="list-heading">
-
         {taskList}
-        {/* <Todo name={task_json[0]["id"]} completed={true} id="todo-0"/>
-        <Todo name="Task2" completed={false} id="todo-1"/>
-    <Todo name="Task3" completed={false} id="todo-2"/> */}
-
     </ul>
     </Layout>
     );

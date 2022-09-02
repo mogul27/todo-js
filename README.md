@@ -23,6 +23,8 @@ Example prop is name="Task1"
 
 Couldn't write JS before because we were writing in the return part itself
 
+Data which a component itself owns, is called state.
+
 ### Javascript code / Syntax learning
 
 export = values can then be imported to other programs using import  
