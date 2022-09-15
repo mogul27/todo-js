@@ -5,16 +5,26 @@ import Todo from '../components/Todo';
 import Form from "../components/Form";
 import FilterButton from "../components/FilterButton";
 import React, { useState } from "react";
+import { nanoid } from "nanoid";
 
-function addTask(name) {
-    alert(name);
-}
 
 export default function TodayList() {
     
     const [tasks, setTasks] = useState(require('../today_tasks.json'))
     const taskList = tasks.map((task) => <Todo key={task.id}  id={task.id}
     name={task.name} completed={task.completed} />);
+
+    // Displaying the number of tasks or task left
+    const taskNoun = taskList.length !== 1 ? 'tasks' : 'task';
+    const headingText = "${taskList.length} ${tasksNoun} remaining";
+
+    function addTask(name) {
+        const newTask = { id: nanoid(), name, completed: false };
+        // ... is kind of like unpacking the objects of each new task
+        // into a Task structure
+        setTasks([...tasks, newTask])
+        // Write data structure to JSON
+    }
 
     return (
     <Layout>
@@ -39,7 +49,7 @@ export default function TodayList() {
     </div>
 
     <h2 id="list-heading">
-        X tasks remaining
+        {headingText}
     </h2>
 
     <ul role='list' className="todo-list stack-large stack-exception"
