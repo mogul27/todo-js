@@ -1,0 +1,12 @@
+
+.h1 {
+    color: white;
+    font-family: "Lucida Bright";
+    font-size: 3em;
+  }  
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

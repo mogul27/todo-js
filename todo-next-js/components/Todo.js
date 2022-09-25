@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import styles from "../styles/eachDay.module.css"
 
 {/* Components represent a chunk of the app that gets reused often */}
 export default function Todo(props){

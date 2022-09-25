@@ -6,8 +6,7 @@ import Form from "../components/Form";
 import FilterButton from "../components/FilterButton";
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
-import styles from "../styles/eachDay.css"
-
+import styles from "../styles/eachDay.module.css"
 
 const FILTER_MAP = {All: () => true, 
                     Active: (task) => !task.completed,
@@ -73,16 +72,19 @@ export default function TodayList() {
     }
 
     return (
-    <Layout>
+    <div>
+    <div className={styles.header}>
     <Head>
         <title>Today's list</title>
     </Head>
 
-     <h1>Todo today</h1>
+     <h1 className={styles.h1}>Todo today </h1>
      <h2>
          <Link href="/">Back to home</Link>
      </h2>
+    </div>
 
+    <div>
      <Form addTask={addTask}/>
 
     {/* These are the buttons for filtering tasks */}
@@ -98,6 +100,7 @@ export default function TodayList() {
     aria-labelledby="list-heading">
         {taskList}
     </ul>
-    </Layout>
+    </div>
+    </div>
     );
 }
