@@ -41,6 +41,10 @@ In the middle of a JSX expression use curly brcaes to inject the value of a vari
 
 => Is for anonymous functions like Python lambda so you can have const sum => {return a +b }
 
+... gets all the properties for one object then you can overwrite the ones you want to change. This allows you to take for example someones age and the class they are in but then overwrite their name and their grade.
+
+! is the logical not operator so turns any Truthy value to it's opposite
+
 
 ### To add
 
