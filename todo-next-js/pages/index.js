@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   return (
-    <Layout home>
+    <div>
     <div className={styles.container}>
       <Head>
         <title>{siteTitle}</title>
@@ -20,11 +20,11 @@ export default function Home() {
           Todo list
         </h1>
 
-        <h2>
+        <button className={styles.defbtn}>
           <Link href="/today"> Today's list</Link>
-        </h2>
+        </button>
       </main>
     </div>
-    </Layout>
+    </div>
   )
 }

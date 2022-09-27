@@ -1,9 +1,10 @@
 import React from "react";
+import styles from "../styles/eachDay.module.css"
 
 export default function FilterButton(props){
 
     return(
-    <button type="button" className="btn toggle-btn" 
+    <button type="button" className={styles.defbtn}
     aria-pressed={props.isPressed} onClick={() => props.setFilter(props.name)}> 
 
     <span className="visually-hidden">

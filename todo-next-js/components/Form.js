@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import styles from "../styles/eachDay.module.css"
 
 
 export default function Form(props) {
@@ -36,7 +37,7 @@ export default function Form(props) {
         onChange={handleChange}
         />
 
-        <button type="submit" className="btn btn_primary btn_lg">
+        <button type="submit" className={styles.defbtn}>
         Add
         </button>
     </form>

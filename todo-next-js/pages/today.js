@@ -74,17 +74,15 @@ export default function TodayList() {
     return (
     <div>
     <div className={styles.header}>
-    <Head>
         <title>Today's list</title>
-    </Head>
 
      <h1 className={styles.h1}>Todo today </h1>
-     <h2>
+     <button className={styles.defbtn}>
          <Link href="/">Back to home</Link>
-     </h2>
+     </button>
     </div>
 
-    <div>
+    <div className={styles.main}>
      <Form addTask={addTask}/>
 
     {/* These are the buttons for filtering tasks */}
